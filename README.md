@@ -1,5 +1,5 @@
 # projeto_Calculadora-CSharp
-Calculadora desenvolvida por Vitor Matheus utilizando Windows Forms e C#.
+Calculadora desenvolvida por Vitor Matheus utilizando Windows Forms e C#. Para utilizar a calculadora é preciso realizar o download do arquivo completo, ter o Visual Studio 2022 instalado, clicar no arquivo "Calculadora.sln" e compilar o arquivo.
 
 ---
 
