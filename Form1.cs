@@ -8,7 +8,6 @@ namespace Calculadora
     {
         //Propriedade
         public string Operador { get; set; } // Propriedade que definine o operador que será utilizado
-        public bool multEscolhido { get; set; }// Propriedade que definine o a exceção de multiplicar por zero .
         public char[] charArray // Propriedade que converte a string presente na textBox em um array de caracteres para que possa ser trabalhado a exclusão do zero a esquerda. 
         {
             get
@@ -23,6 +22,7 @@ namespace Calculadora
         public int posicaoArray = 0; // Atributo que contém a posição em que o array de valor está, seu valor padrão inícial é zero.
         public bool divisaoPorZeroConfirmacao;//Atributo que retorna verdadeiro caso sejá realizado uma divisão por zero, reiniciando a calculadora para estado inicíal.
         public int quantidadeVezesBotaoClicado;//Atributo responsável por atuar como contador de vezes que o botão que insere as operações matemáticas é clicado.
+
         //Métodos
         public Form1()
         {
