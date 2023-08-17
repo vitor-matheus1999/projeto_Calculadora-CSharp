@@ -1,5 +1,19 @@
 # projeto_Calculadora-CSharp
-Calculadora desenvolvida por Vitor Matheus utilizando Windows Forms e C#. Para utilizar a calculadora é preciso realizar o download do arquivo completo, ter o Visual Studio 2022 instalado, clicar no arquivo "Calculadora.sln" e compilar o arquivo.
+Calculadora desenvolvida utilizando Windows Forms e C#. 
+
+## Autor
+- [@vitor-matheus1999](https://www.github.com/vitor-matheus1999)
+
+## Apêndice
+Para utilizar a calculadora é preciso realizar o download do arquivo completo, ter o Visual Studio instalado, clicar no arquivo "Calculadora.sln" e compilar o arquivo.
+
+## Features
+- Reiniciar a calculadora;
+- Realizar cálculos apenas clicando nos operadoradores;
+- Excluir zero a esquerda;
+- Substituir o número zero caso aja apenas esse número na cálculadora;
+- Apresentar mensagem de erro de divisão por zero.
+
 
 ---
 
@@ -24,6 +38,13 @@ No total, a calculadora possui 16 botões:
 Em cima dos botões,o display atuará por apresentar os números e resultador obtidos pela calculadora.
 
 Para que os números sejam lidos, e os cálculos realizados, é preciso que o usuário clique nos botões que constam na calculadora. Clicando nos números com o mouse, a cálculadora apresentará em seu display o número desejado pelo usuário.
+
+## Sobre o código e a lógica utilizada 
+<div>
+<b>Disclairmer:</b>
+<i> Primeiramente, o código apresenta de forma "pouco produtiva" a maneira com que poderia ser criado os métodos, funções, propriedes e atributos. A criação de uma classe que tratasse as funcionalidades e exceções da calculadora, tornaria o código "mais limpo" no arquivo "Form1.cs". Porém, por conta do tempo em que tive para construir esse projeto, acabei focando em construir todo o código  nesse unico arquivo e explicar aqui no "Readme" de forma mais minuciosa.<i>
+</div>
+
 
 
 
