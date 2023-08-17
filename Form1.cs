@@ -12,12 +12,12 @@ namespace Calculadora
         {
             get
             {
-                this.arrayCriado = textBox1.Text.ToCharArray(0, textBox1.Text.Length);           
-                return this.arrayCriado;
+                this.arrayCaracteres = textBox1.Text.ToCharArray(0, textBox1.Text.Length);           
+                return this.arrayCaracteres;
             }
         }
         //Atributos
-        public char[] arrayCriado; // Atributo que recebe o array de caracteres que será trabalhado nas exceções
+        public char[] arrayCaracteres; // Atributo que recebe o array de caracteres que será trabalhado nas exceções
         public string[] valor = new string[2]; // Atributo responsável por receber um Array de duas posições que controla os valores das variáveis que estarão no cálculo realizado pela cálculadora.
         public int posicaoArray = 0; // Atributo que contém a posição em que o array de valor está, seu valor padrão inícial é zero.
         public bool divisaoPorZeroConfirmacao;//Atributo que retorna verdadeiro caso sejá realizado uma divisão por zero, reiniciando a calculadora para estado inicíal.
