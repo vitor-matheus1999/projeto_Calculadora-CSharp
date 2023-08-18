@@ -5,7 +5,9 @@ Calculadora desenvolvida utilizando Windows Forms e C#.
 - [@vitor-matheus1999](https://www.github.com/vitor-matheus1999)
 
 ## Apêndice
-Para utilizar a calculadora é preciso realizar o download do arquivo completo, ter o Visual Studio instalado, clicar no arquivo "Calculadora.sln" e compilar o arquivo.
+Para utilizar a calculadora é preciso realizar o download do arquivo completo e seguir o caminho:
+bin\Debug\net6.0-windows
+Em seguida selecionar o arquivo executável "Calculadora".
 
 ## Features
 - Reiniciar a calculadora;
