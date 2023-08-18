@@ -45,7 +45,7 @@ Para que os números sejam lidos, e os cálculos realizados, é preciso que o us
 
 ## Sobre o código e a lógica utilizada 
 
-A lógica de uma calculadora simples é básica; reunir duas variáveis, utilizando um operador matemático para definir o tipo de cálculo requerido e logo em seguida apresentar o resultado obtido.
+A lógica de uma calculadora simples é básica; reunir duas variáveis, utilizando um operador matemático para definir o tipo de cálculo que será realizado e logo em seguida, depois de realizar a conta, apresentar o resultado obtido.
 
 
 
