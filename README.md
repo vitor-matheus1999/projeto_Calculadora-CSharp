@@ -39,13 +39,39 @@ No total, a calculadora possui 16 botões:
 * 1 botão de igual para representar o resultado obtido pelo cálculo realizado;
 * 1 botão "AC" ou "All Clear" para reiniciar a calculadora.
 
-Em cima dos botões,o display atuará por apresentar os números e resultador obtidos pela calculadora.
+Em cima dos botões, o display atuará por apresentar os números e resultador obtidos pela calculadora.
 
 Para que os números sejam lidos, e os cálculos realizados, é preciso que o usuário clique nos botões que constam na calculadora. Clicando nos números com o mouse, a cálculadora apresentará em seu display o número desejado pelo usuário.
 
 ## Sobre o código e a lógica utilizada 
 
-A lógica de uma calculadora simples é básica; reunir duas variáveis, utilizando um operador matemático para definir o tipo de cálculo que será realizado e logo em seguida, depois de realizar a conta, apresentar o resultado obtido.
+A lógica de uma calculadora simples é básica. Primeiramente, precisamos entender como funciona um cálculo matemático simples: é preciso reunir no mínimo duas variáveis que serão os nossos operandos, em seguida pegaremos um operador matemático para definir o tipo de cálculo que será realizado e, por fim, realizar a conta para então apresentar o resultado obtido.
+
+Agora, tendo a lógica em mente poderemos começar a utilizar o C# para construir a calculadora.
+
+### Porém, por onde podemos começar?
+
+Podemos começar construindo a maneira em que trabalharemos com os operandos. Primeiramente, os operandos irão trabalhar como variáveis ma calculadora simples e como dito anteriormente, é preciso no mínimo dois operandos para gerar um cálculo. Assim, como será necessário armazenar duas variáveis diferentes, poderemos utilizar um array uni-dimensional de duas posições para armazenar esses dois valores:
+
+```cs
+ public string[] valor = new string[2];
+```
+
+ E como será preciso alterar entre essas duas posições será criado um atríbuto para passar em que posição o array deve estar quando necessário:
+
+ ```cs
+ public int posicaoArray = 0;
+```
+
+O motivo do array ser uma variável do tipo "String", é por conta de que as variáveis que estarão sendo trabalhadas precisão ser apresentadas no display (que é um "textBox") que trabalha unicamente com texto. Outra dúvida possível é: 
+
+### Por que será criado um array com apenas duas posições se um cálculo matemático pode ter mais de dois operandos?
+
+Para responder essa questão será preciso entender a maneira com que a lógica para trabalhar com os resultados dos cálculos foi pensada:
+
+Como é preciso no mínimo duas variáveis para construir uma conta podemos fazer com que apenas duas variáveis sejam necessário para trabalhar com múltiplos operandos.
+
+
 
 
 
