@@ -23,9 +23,16 @@ namespace Calculadora
         public bool divisaoPorZeroConfirmacao;//Atributo que retorna verdadeiro caso sejá realizado uma divisão por zero, reiniciando a calculadora para estado inicíal.
         public int quantidadeVezesBotaoClicado;//Atributo responsável por atuar como contador de vezes que o botão que insere as operações matemáticas é clicado.
 
+        struct ValorInicial
+        {
+            
+        }
+
         //Métodos
         public Form1()
         {
+            this.valor[0] = "0";
+            this.valor[1] = "0";
             InitializeComponent();
         }
         public void excluirZeroAEsquerda()
@@ -84,21 +91,20 @@ namespace Calculadora
                     textBox1.Text = this.valor[0];
                     break;
                 case "/":
-                    try
+                   
+                    resultadoFloat = float.Parse(this.valor[0]) / float.Parse(this.valor[1]);
+                    this.valor[0] = resultadoFloat.ToString();
+                    this.valor[1] = "0";
+                    textBox1.Text = this.valor[0];
+                                                      
+                    if(float.IsInfinity(resultadoFloat) == true)
                     {
-                        resultadoFloat = float.Parse(this.valor[0]) / float.Parse(this.valor[1]);
-                        this.valor[0] = resultadoFloat.ToString();
-                        this.valor[1] = "0";
-                        textBox1.Text = this.valor[0];
-                        break;
-                    }
-                    catch (DivideByZeroException)
-                    {
+
                         divisaoPorZeroConfirmacao = true;
                         textBox1.Font = new Font(textBox1.Font.FontFamily, 15);
                         textBox1.Text = "Não é possível dividir por zero";
-                        break;
                     }
+                    break;   
                 default:
                     this.valor[0] = "0";
                     this.valor[1] = "0";
@@ -335,13 +341,15 @@ namespace Calculadora
         private void button15_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+            textBox1.BackColor = SystemColors.Control;
+            textBox1.Font = new Font(textBox1.Font.FontFamily, 24);
+            textBox1.Font = new Font(textBox1.Font, FontStyle.Bold);
             textBox1.Text = this.valor[0] = "0";
             this.valor[1] = "0";
             clicouOperador(false);
             posicaoArray = 0;
             quantidadeVezesBotaoClicado = 0;
             divisaoPorZeroConfirmacao = false;
-
         }
 
 
