@@ -51,7 +51,7 @@ Agora, tendo a lógica em mente poderemos começar a utilizar o C# para construi
 
 ### Porém, por onde podemos começar?
 
-Podemos começar construindo a maneira em que trabalharemos com os operandos. Primeiramente, os operandos irão trabalhar como variáveis ma calculadora simples e como dito anteriormente, é preciso no mínimo dois operandos para gerar um cálculo. Assim, como será necessário armazenar duas variáveis diferentes, poderemos utilizar um array uni-dimensional de duas posições para armazenar esses dois valores:
+Podemos começar construindo a maneira em que trabalharemos com os operandos. Primeiramente, os operandos irão trabalhar como variáveis na calculadora simples e como dito anteriormente, é preciso no mínimo dois operandos para gerar um cálculo. Assim, como será necessário armazenar duas variáveis diferentes, poderemos utilizar um array uni-dimensional de duas posições para armazenar esses dois valores:
 
 ```cs
  public string[] valor = new string[2];
@@ -69,7 +69,24 @@ O motivo do array ser uma variável do tipo "String", é por conta de que as var
 
 Para responder essa questão será preciso entender a maneira com que a lógica para trabalhar com os resultados dos cálculos foi pensada:
 
-Como é preciso no mínimo duas variáveis para construir uma conta podemos fazer com que apenas duas variáveis sejam necessário para trabalhar com múltiplos operandos.
+Como é preciso no mínimo duas variáveis para construir um cálculo matemático podemos fazer com que apenas duas variáveis sejam necessário para trabalhar com múltiplos operandos.Para isso o array criado receberá dois valores que atuarão como operandos do cálculo matemático, funcionando do seguinte modo:
+
+***posição 0 do array*** (operador matemático) ***posição 1 do array***  
+
+Em seguida, com o resultado obtido o valor será passado para a primeira posição (ou posição 0) e apresentado no display, já o valor na segunda posição (ou posição 1) será zerado para que sejá possível inserir um novo valor e realizar um novo cálculo matemática utilizando o resultado obtido anteriormente. Diante do exposto, é possível concluir que:
+
+- Não existe necessidade de se fazer uma lista com múltiplos operandos, pois com apenas dois é possível tratar essa possibilidade fazendo com que sejá inserido um novo operando de cada vez na segunda posição (ou posição 1) preservando o resultado obtido anteriormente na primeira posição (ou posição 0), gerando assim um "looping" de cálculos.
+
+ O código a seguir exemplifica o que foi explicado anteriormente:
+ ```cs
+case "+":
+                    resultado = Int64.Parse(this.valor[0]) + Int64.Parse(this.valor[1]); // valor na primeira e segunda posição realizando o cálculo
+                    this.valor[0] = resultado.ToString(); // o resultado segue para a primeira posição
+                    this.valor[1] = "0"; // é zerado a segunda posição
+                    textBox1.Text = this.valor[0]; // Por fim é apresentado o resultado, que está nesse momento está na primeira posição.
+                    break;
+```
+
 
 
 
